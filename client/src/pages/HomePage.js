@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import ExerciseList from '../components/ExerciseList';
 import Navigation from '../components/Navigation';
 import { useHistory } from 'react-router-dom';

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
@@ -52,11 +53,14 @@ function AddExercise() {
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
       />
-      <input
+      <select
         type='select'
         value={unit}
         onChange={(e) => setUnit(e.target.value)}
-      />
+      >
+        <option value='lbs'>lbs (pounds)</option>
+        <option value='kg'>kg (kilograms)</option>
+      </select>
       <input
         type='date'
         value={date}

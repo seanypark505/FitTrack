@@ -44,7 +44,7 @@ const addExercise = async (name, reps, weight, unit, date) => {
 };
 
 // Find All
-const findExercises = async (filter, project, limit) => {
+const findExercises = async (filter, projection, limit) => {
   const query = Exercise.find(filter).select(projection).limit(limit);
   return query.exec();
 };
