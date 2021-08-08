@@ -50,15 +50,15 @@ const findExercises = async (filter, project, limit) => {
 };
 
 // Find By Id
-const findExerciseById = async (_id) => {
-  const query = Exercise.findById(_id);
+const findExerciseById = async (id) => {
+  const query = Exercise.findById(id);
   return query.exec();
 };
 
 // Update Exercise by Id
-const updateById = async (_id, name, reps, weight, unit, date) => {
+const updateById = async (id, name, reps, weight, unit, date) => {
   const result = await Exercise.updateOne(
-    { _id: _id },
+    { _id: id },
     { name: name, reps: reps, weight: weight, unit: unit, date: date },
     { omitUndefined: true }
   );
@@ -70,8 +70,8 @@ const updateById = async (_id, name, reps, weight, unit, date) => {
 };
 
 // Delete by Id
-const deleteById = async (_id) => {
-  const result = await Exercise.deleteOne({ _id: _id });
+const deleteById = async (id) => {
+  const result = await Exercise.deleteOne({ _id: id });
   return result.deletedCount;
 };
 
