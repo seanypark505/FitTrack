@@ -2,9 +2,9 @@
   "name": "fittrack-server",
   "version": "1.0.0",
   "description": "rest api for fittrack - cs290 assignment 4 portfolio project",
-  "main": "nodemon controller.mjs",
+  "main": "controller.mjs",
   "scripts": {
-    "start": "controller.mjs",
+    "start": "nodemon controller.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sean Park",
