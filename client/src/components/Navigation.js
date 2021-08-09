@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 function Navigation(props) {
   return (
     <Button to={props.path} as={Link} variant='primary'>
-      {props.icon}
       {props.page}
     </Button>
   );

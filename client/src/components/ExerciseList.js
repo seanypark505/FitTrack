@@ -2,7 +2,6 @@ import React from 'react';
 import Exercise from './Exercise';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-import { FiTrash2, FiEdit } from 'react-icons/fi';
 
 function ExerciseList({ exercises, onDelete, onEdit }) {
   return (

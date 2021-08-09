@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import { FiTrash2, FiEdit } from 'react-icons/fi';
 
 function AddExercise() {
   const [name, setName] = useState('');
