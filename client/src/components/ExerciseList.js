@@ -1,31 +1,43 @@
 import React from 'react';
 import Exercise from './Exercise';
+import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+import { FiTrash2, FiEdit } from 'react-icons/fi';
 
 function ExerciseList({ exercises, onDelete, onEdit }) {
   return (
-    <table id='exercises'>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Reps</th>
-          <th>Weight</th>
-          <th>Unit</th>
-          <th>Date</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        {exercises.map((exercise, i) => (
-          <Exercise
-            key={i}
-            exercise={exercise}
-            onDelete={onDelete}
-            onEdit={onEdit}
-          />
-        ))}
-      </tbody>
-    </table>
+    <Container>
+      <Table
+        striped
+        bordered
+        hover
+        variant='dark'
+        id='exercises'
+        className='mb-4'
+      >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Reps</th>
+            <th>Weight</th>
+            <th>Unit</th>
+            <th>Date</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {exercises.map((exercise, i) => (
+            <Exercise
+              key={i}
+              exercise={exercise}
+              onDelete={onDelete}
+              onEdit={onEdit}
+            />
+          ))}
+        </tbody>
+      </Table>
+    </Container>
   );
 }
 

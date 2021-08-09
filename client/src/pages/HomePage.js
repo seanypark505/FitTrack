@@ -14,13 +14,13 @@ function HomePage({ setExerciseToEdit }) {
     setExercises(data);
   };
 
-  const onDelete = async (id) => {
-    const res = await fetch(`/exercises/${id}`, { method: 'DELETE' });
+  const onDelete = async (_id) => {
+    const res = await fetch(`/exercises/${_id}`, { method: 'DELETE' });
     if (res.status === 204) {
-      setExercises(exercises.filter((exercise) => exercise.id !== id));
+      setExercises(exercises.filter((exercise) => exercise._id !== _id));
     } else {
       console.error(
-        `Status Code: ${res.status} - Failed to delete exercise with ${id}.`
+        `Status Code: ${res.status} - Failed to delete exercise with ${_id}.`
       );
     }
   };
@@ -42,7 +42,7 @@ function HomePage({ setExerciseToEdit }) {
         onDelete={onDelete}
         onEdit={onEdit}
       ></ExerciseList>
-      <Navigation path='/add-exercise' page='Add Exercise'></Navigation>
+      <Navigation path='/add-exercise' page='Create New Exercise'></Navigation>
     </>
   );
 }

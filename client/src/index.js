@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import 'semantic-ui-css/semantic.min.css';
 import reportWebVitals from './reportWebVitals';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import { GiWeightLiftingUp } from 'react-icons/gi';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar bg='dark' variant='dark' fixed='top'>
+      <Container>
+        <Navbar.Brand>
+          <GiWeightLiftingUp></GiWeightLiftingUp>
+        </Navbar.Brand>
+        <Navbar.Text className='me-auto'>FitTrack by Sean Park</Navbar.Text>
+      </Container>
+    </Navbar>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

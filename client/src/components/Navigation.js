@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
+import Button from 'react-bootstrap/Button';
 
 function Navigation(props) {
   return (
-    <Button as={Link} to={props.path} color='blue'>
+    <Button to={props.path} as={Link} variant='primary'>
       {props.icon}
       {props.page}
     </Button>
