@@ -1,3 +1,4 @@
+// require('dotenv').config();
 import * as exercises from './exercises_model.mjs';
 import express from 'express';
 const app = express();

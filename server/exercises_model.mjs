@@ -1,16 +1,19 @@
 import mongoose from 'mongoose';
+const uri = process.env.MONGODB_URI;
 
 // Prep database
-mongoose.connect('mongodb://localhost:27017/exercisesDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect('mongodb+srv://admin-sean:testsean123@taskmastercluster.zzfmh.mongodb.net/fitTrackDB?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .catch((error) => console.error(error));
 
 // Connect to db
 const db = mongoose.connection;
 
 db.once('open', () => {
-  console.log('Connected to exercisesDB on port 27017');
+  console.log('Connected to fitTrackDB');
 });
 
 // Create indices
